@@ -1,0 +1,41 @@
+#skills {
+    padding: 50px 20px; /* Espaciado superior e inferior */
+    background-color: #000000; /* Fondo oscuro */
+    color: #07587e; /* Color del texto */
+}
+
+.skills-container {
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.skills-grid {
+    display: grid; /* Usa grid para las habilidades */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre las habilidades */
+}
+
+.skill {
+    background-color: #111111c7; /* Fondo de cada habilidad */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    transition: transform 0.3s; /* Transición suave */
+}
+
+.skill:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+.skill i {
+    font-size: 2rem; /* Tamaño del icono */
+    margin-bottom: 10px; /* Espacio debajo del icono */
+    color: white; /* Color blanco para los iconos */
+}
+
+.skill span {
+    display: block; /* Asegura que el texto esté en una nueva línea */
+    font-size: 1.2rem; /* Tamaño del texto */
+}
+

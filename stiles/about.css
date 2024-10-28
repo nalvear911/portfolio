@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto; /* Permite que el cuerpo se ajuste al contenido */
+    background-color: black;
+    color: white; /* Color del texto por defecto */
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0; /* Mantiene el navbar en la parte superior */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; /* Mejor distribución */
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem; /* Ajustado */
+    font-weight: bold;
+}
+
+.logo span {
+    color: #1e82ad;
+    text-shadow: 0 0 10px #07587e;
+}
+
+.hamburg,
+.cancel {
+    cursor: pointer;
+    color: white;
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links {
+    display: flex;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #07587e;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .links a:hover {
+    color: #07587e;
+}
+
+.dropdown {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+    background-color: #07587e;
+}
+
+section {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.about-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Espacio entre secciones */
+}
+
+.about-image {
+    width: 300px; /* Tamaño ajustado */
+    height: 300px; /* Mantiene proporciones */
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px #07587e;
+    margin-right: 60px; /* Espacio a la derecha */
+}
+
+.about-image img {
+    width: 100%;
+}
+
+.content {
+    width: 50%; /* Mejor distribución */
+}
+
+.content h1 {
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.content h1 span {
+    color: #07587e;
+    text-shadow: 0 0 10px #07587e;
+}
+
+.content .typewriter {
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+}
+
+.content p {
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+.cert-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre los logos */
+    margin-top: 10px; /* Espacio superior */
+}
+
+.cert-logos img {
+    width: 200px; /* Tamaño ajustado */
+    transition: transform 0.3s; /* Transición */
+}
+
+.cert-logos img:hover {
+    transform: scale(1.1); /* Efecto al pasar el ratón */
+}
+
+.certifications-section {
+    text-align: end;
+    margin-top: 20px;
+}
+
+.cert-container {
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.cert-container h2 {
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.cert-container ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding */
+}
+
+.cert-container li {
+    margin: 5px 0; /* Espacio entre los elementos de la lista */
+    font-size: 1.1em; /* Tamaño de la fuente de los elementos de la lista */
+}
+
+/* Responsiv */
+@media (max-width: 884px) {
+    nav .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburg,
+    .cancel {
+        display: block;
+    }
+
+    .about {
+        flex-direction: column; /* Cambia la dirección en pantallas pequeñas */
+        align-items: center; /* Centra el contenido */
+    }
+
+    .about-image {
+        width: 80%; /* Ajustado para pantallas pequeñas */
+        height: auto; /* Mantiene proporciones */
+    }
+
+    .content {
+        width: 90%; /* Ajustado para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 440px) {
+    .main-container .image {
+        width: 50%;
+        height: 60%;
+        margin-bottom: 0px;
+    }
+
+    .main-container .content {
+        width: 80%;
+    }
+
+    .main-container button {
+        margin-top: 15px;
+    }
+}

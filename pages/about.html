@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../stiles/about.css">
+    <title>Nalvear Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Nelly <span>Alvear</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Inicio</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">Acerca de mí</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Habilidades</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="services.html">Servicios</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contacto</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Inicio</a>
+                <a href="about.html">Acerca de mí</a>
+                <a href="skills.html">Habilidades</a>
+                <a href="services.html">Servicios</a>
+                <a href="contact.html">Contacto</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <section id="about">
+        <div class="about-container"> <!-- Contenedor para Acerca de mí -->
+            <div class="about-image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="../images/main.png" alt="Nelly Alvear">
+            </div>
+            <div class="content">
+                <h1>Soy <span>Nalvear</span></h1>
+                <p>Una apasionada del diseño, no solo como una profesión, sino como una forma de entender el mundo. Me encanta crear soluciones que no solo resuelven problemas, sino que también cuentan historias y generan emociones.</p>
+                <p>Creo firmemente que el diseño debe ser una experiencia que atrape y conecte con las personas. Cada proyecto es una oportunidad para explorar nuevas ideas y colaborar con otros. Me inspiran las pequeñas cosas de la vida cotidiana y la diversidad de nuestra cultura, y busco reflejar esa riqueza en mi trabajo.</p>
+                <p>Soy una mujer curiosa y abierta a aprender, siempre en busca de nuevas formas de crecer, tanto personal como profesionalmente. Estoy aquí para compartir mis proyectos y, sobre todo, para construir conexiones significativas. ¡Espero que disfrutes explorando mi portafolio!</p>
+            </div>
+        </div>
+
+        <div class="certifications-container"> <!-- Contenedor para Certificaciones -->
+            <!-- Sección de Logos de Certificaciones -->
+            <div class="cert-logos" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400">
+                <h2>Mis Certificaciones</h2>
+                <img src="/images/proyectos.png" alt="Certificación Proyectos">
+                <img src="/images/ux.png" alt="Certificación UX">
+                <img src="/images/ciberseguridad.png" alt="Certificación Ciberseguridad">
+                <img src="/images/datos.png" alt="Certificación Análisis de Datos">
+            </div>
+            
+            <!-- Sección de Otras Certificaciones -->
+            <section id="certificaciones">
+                <div class="cert-container">
+                    <h2>Otras Certificaciones</h2>
+                    <ul>
+                        <li><strong>Generation, Colombia</strong> - Desarrollo Web Full Stack (Java) - Junior</li>
+                        <li><strong>MINTIC / CYMETRIA, Colombia</strong> - Desarrollo Web Full Stack - Intermedio</li>
+                        <li><strong>MINTIC, Colombia</strong> - Lenguaje de programación Python</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>
